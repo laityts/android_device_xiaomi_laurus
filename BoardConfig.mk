@@ -54,5 +54,8 @@ VENDOR_SECURITY_PATCH := 2021-10-05
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
+
 # Inherit the proprietary files
 -include vendor/xiaomi/laurus/BoardConfigVendor.mk
