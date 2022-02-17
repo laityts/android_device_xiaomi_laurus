@@ -8,7 +8,7 @@
 
 set -e
 
-export DEVICE=laurel_sprout
+export DEVICE=laurus
 export DEVICE_COMMON=sm6125-common
 export VENDOR=xiaomi
 

@@ -22,20 +22,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Inherit from laurel_sprout device
+# Inherit from laurus device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 PRODUCT_BRAND := Xiaomi
-PRODUCT_DEVICE := laurel_sprout
+PRODUCT_DEVICE := laurus
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := lineage_laurel_sprout
-PRODUCT_MODEL := Mi A3
+PRODUCT_NAME := lineage_laurus
+PRODUCT_MODEL := Mi CC 9E
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-TARGET_VENDOR_PRODUCT_NAME := laurel_sprout
+TARGET_VENDOR_PRODUCT_NAME := laurus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="laurel_sprout-user 11 RKQ1.200903.002 V12.0.15.0.RFQMIXM release-keys"
+    PRIVATE_BUILD_DESC="laurus-user 10 QKQ1.190910.002 V12.5.5.0.QFMCNXM release-keys"
 
-BUILD_FINGERPRINT := Xiaomi/laurel_sprout/laurel_sprout:11/RKQ1.200903.002/V12.0.15.0.RFQMIXM:user/release-keys
+BUILD_FINGERPRINT := Xiaomi/laurus/laurus:10/QKQ1.190910.002/V12.5.5.0.QFMCNXM:user/release-keys

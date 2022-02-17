@@ -1,6 +1,6 @@
-# Device Tree for Mi A3 (laurel_sprout)
+# Device Tree for Xiaomi CC 9E (laurus)
 
-The Mi A3 (codenamed "laurel_sprout") is a mid-range smartphone from Xiaomi. It was announced and released in July 2019.
+The Mi CC 9E (codenamed "laurus") is a mid-range smartphone from Xiaomi. It was announced and released in July 2019.
 
 ## Device specifications
 

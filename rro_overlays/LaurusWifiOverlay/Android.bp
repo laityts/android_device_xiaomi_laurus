@@ -1,6 +1,6 @@
 runtime_resource_overlay {
-    name: "LaurelWifiOverlay",
-    theme: "LaurelWifiOverlay",
+    name: "LaurusWifiOverlay",
+    theme: "LaurusWifiOverlay",
     sdk_version: "current",
     product_specific: true
 }

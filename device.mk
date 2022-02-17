@@ -21,41 +21,17 @@
 # definition file).
 #
 
-AB_OTA_UPDATER := true
-
 # Inherit from sm6125-common
 $(call inherit-product, device/xiaomi/sm6125-common/common.mk)
 
-DEVICE_PATH := device/xiaomi/laurel_sprout
+DEVICE_PATH := device/xiaomi/laurus
 
 # Inherit properties.mk
 $(call inherit-product, $(DEVICE_PATH)/properties.mk)
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH) \
-    hardware/xiaomi
-
-# A/B
-AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_system=true \
-    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
-    FILESYSTEM_TYPE_system=ext4 \
-    POSTINSTALL_OPTIONAL_system=true
-
-PRODUCT_PACKAGES += \
-    otapreopt_script
-
-# Boot control
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.1-impl-qti \
-    android.hardware.boot@1.1-impl-qti.recovery \
-    android.hardware.boot@1.1-service \
-    bootctrl.trinket \
-    bootctrl.trinket.recovery
-
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl
+    $(LOCAL_PATH)
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -75,7 +51,7 @@ PRODUCT_COPY_FILES += \
     vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
 PRODUCT_PACKAGES += \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_laurel_sprout
+    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_laurus
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -93,18 +69,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.multihal
 
-# Update engine
-PRODUCT_PACKAGES += \
-    update_engine \
-    update_engine_sideload \
-    update_verifier
-
-PRODUCT_PACKAGES_DEBUG += \
-    update_engine_client
-
 # Wifi
 PRODUCT_PACKAGES += \
-    LaurelWifiOverlay
+    LaurusWifiOverlay
 
 # Inherit proprietary files
-$(call inherit-product-if-exists, vendor/xiaomi/laurel_sprout/laurel_sprout-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/laurus/laurus-vendor.mk)
